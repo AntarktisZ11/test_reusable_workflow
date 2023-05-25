@@ -1,0 +1,31 @@
+# README
+**/README.md
+
+# Symbols
+symbols/**
+!symbols/*.dcm
+!symbols/*.lib
+!symbols/*.kicad_sym
+
+# Footprints
+# only allow: footprints/*.pretty/*.kicad_mod
+footprints/*
+!footprints/*.pretty
+footprints/*.pretty/*
+!footprints/*.pretty/*.kicad_mod
+
+# 3D-models
+3d_models/**
+!3d_models/*.stp
+!3d_models/*.step
+!3d_models/*.wrl
+
+# Kicad project files for component making purposes
+*.kicad_pcb
+*.kicad_pro
+*.kicad_sch
+*.kicad_prl
+sym-lib-table
+fp-lib-table
+fp-info-cache
+*-backups
