@@ -7,5 +7,5 @@ jobs:
   Schematic_change:
     uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_schematic_change.yaml@main
     with:
-      BaseFileName: ESP32-CAM-WebServer-Circuit
-      KiCadProjectDir: pcb
+      BaseFileName: ${{ vars.KICAD_PROJECT_NAME }}
+      KiCadProjectDir: ${{ vars.KICAD_PROJECT_DIR }}
