@@ -5,7 +5,7 @@ on:
   
 jobs:
   Output_all_KiBot:
-    uses: AntarktisZ11/reusable-workflows/.github/workflows/output_all.kibot.yaml@main
+    uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_test_all.yaml@main
     with:
       KiCadProjectName: ESP32-CAM-WebServer-Circuit
       KiCadProjectDir: pcb
