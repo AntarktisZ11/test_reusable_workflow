@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  Schematic_change:
+  Board_change:
     uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_board_change.yaml@main
     with:
       KiCadProjectName: ESP32-CAM-WebServer-Circuit
