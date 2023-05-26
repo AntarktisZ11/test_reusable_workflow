@@ -1,0 +1,11 @@
+name: Test KiBot reusable workflow - Output all
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  Output_all_KiBot:
+    uses: AntarktisZ11/reusable-workflows/.github/workflows/output_all.kibot.yaml@main
+    with:
+      KiCadProjectName: ESP32-CAM-WebServer-Circuit
+      KiCadProjectDir: pcb
