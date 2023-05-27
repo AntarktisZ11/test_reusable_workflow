@@ -1,8 +1,15 @@
 name: Test KiBot reusable workflow - Schematic Change
 
 on:
+  # Manually trigger workflow
   workflow_dispatch:
-  
+
+  # Trigger when schematic is edited
+  push:
+    branches: main
+    paths:
+      - "**.kicad_sch"
+
 jobs:
   Schematic_change:
     uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_schematic_change.yaml@main

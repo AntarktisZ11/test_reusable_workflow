@@ -3,13 +3,13 @@ name: Test KiBot reusable workflow - Board Change
 on:
   # Manually trigger workflow
   workflow_dispatch:
-  
-  # Trigger when .kicad_pcb is edited
+
+  # Trigger when board is edited
   push:
     branches: main
     paths:
       - "**.kicad_pcb"
-  
+
 jobs:
   Board_change:
     uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_board_change.yaml@main
