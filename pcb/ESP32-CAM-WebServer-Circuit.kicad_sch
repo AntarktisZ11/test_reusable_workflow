@@ -1434,7 +1434,7 @@
     (in_bom yes) (on_board yes)
     (uuid c1ead54a-815e-4ce3-bf4f-b556067e48c0)
     (property "Reference" "SW1" (id 0) (at 82.55 63.5 0))
-    (property "Value" "SW_SPDT" (id 1) (at 82.55 66.04 0))
+    (property "Value" "EG1270" (id 1) (at 82.55 66.04 0))
     (property "Footprint" "EG1270:EG1270" (id 2) (at 81.28 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1666,7 +1666,7 @@
       (reference "R2") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/c1ead54a-815e-4ce3-bf4f-b556067e48c0"
-      (reference "SW1") (unit 1) (value "SW_SPDT") (footprint "EG1270:EG1270")
+      (reference "SW1") (unit 1) (value "EG1270") (footprint "EG1270:EG1270")
     )
     (path "/63694636-63be-462a-8a1b-89ddd1539f56"
       (reference "U1") (unit 1) (value "TP4056-Module") (footprint "TP4056-Module:TP4056-Module")
