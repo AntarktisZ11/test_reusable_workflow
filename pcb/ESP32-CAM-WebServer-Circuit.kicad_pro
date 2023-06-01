@@ -437,7 +437,6 @@
   ],
   "text_variables": {
     "DATE": "2023-06-01",
-    "REV": "Git:4fd512b",
-    "SCH_FILE": "/github/workspace/pcb/ESP32-CAM-WebServer-Circuit.kicad_sch"
+    "REV": "Git:4fd512b"
   }
 }
