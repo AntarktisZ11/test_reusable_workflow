@@ -8,7 +8,7 @@ IO:fopen:r
 IO:open:/usr/share/X11/xkb/rules/evdev.lst
 IO:fopen:r
 * wrapping fclose
-* next_func : 0x7f3bc672a210
+* next_func : 0x7fce197b2210
 IO:close:/usr/share/X11/xkb/rules/evdev.lst
 IO:open:/usr/share/X11/xkb/rules/evdev-C
 IO:fopen:r
@@ -19,4 +19,4 @@ rules:      evdev
 model:      pc105
 layout:     us
 * wrapping close
-IO:close:socket:[27993]
+IO:close:socket:[28743]

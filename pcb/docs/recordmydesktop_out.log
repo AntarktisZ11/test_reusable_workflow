@@ -2,7 +2,7 @@
 IO:open:/github/workspace/pcb/docs/export_eeschema_screencast.ogv
 IO:fopen:w
 * wrapping fclose
-* next_func : 0x7fc96e619210
+* next_func : 0x7fcfd8ef9210
 IO:close:/github/workspace/pcb/docs/export_eeschema_screencast.ogv
 * wrapping close
-IO:close:socket:[28015]
+IO:close:socket:[28762]
