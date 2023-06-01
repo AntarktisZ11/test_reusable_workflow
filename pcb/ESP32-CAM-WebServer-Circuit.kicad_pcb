@@ -116,6 +116,7 @@
     (at 157.48 58.42 180)
     (descr "SOT, 5 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178c.PDF variant AA), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
+    (property "Farnell Nr" "3535464")
     (property "Sheetfile" "ESP32-CAM-WebServer-Circuit.kicad_sch")
     (property "Sheetname" "")
     (path "/4c44e240-f7f4-4b9b-99ea-11132b09e7d2")
@@ -293,6 +294,7 @@
     (at 171.45 62.23 180)
     (descr "SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
+    (property "Farnell Nr" "2706627")
     (property "Sheetfile" "ESP32-CAM-WebServer-Circuit.kicad_sch")
     (property "Sheetname" "")
     (path "/1621c2bd-ccac-40a7-8dd4-4157647bbb07")
@@ -480,7 +482,7 @@
       (effects (font (size 1.27 1.27) (thickness 0.254)) (justify mirror))
       (tstamp 4cafb73d-1ad8-4d24-acf7-63d78095ae46)
     )
-    (fp_text value "SW_SPDT" (at -1.85 2.5 90) (layer "B.SilkS") hide
+    (fp_text value "EG1270" (at -1.85 2.5 90) (layer "B.SilkS") hide
       (effects (font (size 1.27 1.27) (thickness 0.254)) (justify mirror))
       (tstamp be4b72db-0e02-4d9b-844a-aff689b4e648)
     )
