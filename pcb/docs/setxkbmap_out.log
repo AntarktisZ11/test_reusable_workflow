@@ -1,0 +1,22 @@
+* wrapping fopen
+IO:open:./rules/evdev-C.lst
+IO:fopen:r
+IO:open:./rules/evdev.lst
+IO:fopen:r
+IO:open:/usr/share/X11/xkb/rules/evdev-C.lst
+IO:fopen:r
+IO:open:/usr/share/X11/xkb/rules/evdev.lst
+IO:fopen:r
+* wrapping fclose
+* next_func : 0x7f3bc672a210
+IO:close:/usr/share/X11/xkb/rules/evdev.lst
+IO:open:/usr/share/X11/xkb/rules/evdev-C
+IO:fopen:r
+IO:open:/usr/share/X11/xkb/rules/evdev
+IO:fopen:r
+IO:close:/usr/share/X11/xkb/rules/evdev
+rules:      evdev
+model:      pc105
+layout:     us
+* wrapping close
+IO:close:socket:[27993]
