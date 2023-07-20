@@ -1,0 +1,64 @@
+name: Test KiBot reusable workflow - PCB Change
+
+on:
+  # Manually trigger workflow
+  workflow_dispatch:
+    inputs:
+      KiBot-Verbosity:
+        description: "Log levels for KiBot. Higher is more verbose."
+        required: false
+        default: "0"
+        type: choice
+        options:
+          - "0"
+          - "1"
+          - "2"
+          - "3"
+
+  # Trigger when PCB is edited
+  push:
+    branches: main
+    paths:
+      - "**.kicad_sch"
+      - "**.kicad_pcb"
+
+jobs:
+  PCB_change:
+    env:
+      KiCadProjectName: ESP32-CAM-WebServer-Circuit
+      KiCadProjectDir: pcb
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+      # Create boolean for if the filetype
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            schematic:
+              - "**.kicad_sch"
+            board:
+              - "**.kicad_pcb"
+
+      - if: steps.filter.outputs.schematic == 'true'
+        uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_schematic_change.yaml@main
+        with:
+          KiCadProjectName: ${{ env.KiCadProjectName }}
+          KiCadProjectDir: ${{ env.KiCadProjectDir }}
+          KiBot-Verbosity: ${{ inputs.KiBot-Verbosity || '0' }}
+
+      - if: steps.filter.outputs.board == 'true'
+        uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_board_change.yaml@main
+        with:
+          KiCadProjectName: ${{ env.KiCadProjectName }}
+          KiCadProjectDir: ${{ env.KiCadProjectDir }}
+          KiBot-Verbosity: ${{ inputs.KiBot-Verbosity || '0' }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update PCB Documentation
