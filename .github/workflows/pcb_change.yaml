@@ -17,48 +17,20 @@ on:
 
   # Trigger when PCB is edited
   push:
-    branches: main
+    branches: [main]
     paths:
       - "**.kicad_sch"
       - "**.kicad_pcb"
 
 jobs:
   PCB_change:
-    env:
-      KiCadProjectName: ESP32-CAM-WebServer-Circuit
-      KiCadProjectDir: pcb
-    runs-on: ubuntu-latest
-
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
       contents: write
 
-    steps:
-      # Create boolean for if the filetype
-      - uses: dorny/paths-filter@v2
-        id: filter
-        with:
-          filters: |
-            schematic:
-              - "**.kicad_sch"
-            board:
-              - "**.kicad_pcb"
-
-      - if: steps.filter.outputs.schematic == 'true'
-        uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_schematic_change.yaml@main
-        with:
-          KiCadProjectName: ${{ env.KiCadProjectName }}
-          KiCadProjectDir: ${{ env.KiCadProjectDir }}
-          KiBot-Verbosity: ${{ inputs.KiBot-Verbosity || '0' }}
-
-      - if: steps.filter.outputs.board == 'true'
-        uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_board_change.yaml@main
-        with:
-          KiCadProjectName: ${{ env.KiCadProjectName }}
-          KiCadProjectDir: ${{ env.KiCadProjectDir }}
-          KiBot-Verbosity: ${{ inputs.KiBot-Verbosity || '0' }}
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update PCB Documentation
+    uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_schematic_change.yaml@main
+    with:
+      KiCadProjectName: ESP32-CAM-WebServer-Circuit
+      KiCadProjectDir: pcb
+      KiBot-Verbosity: ${{ inputs.KiBot-Verbosity || '0' }}
