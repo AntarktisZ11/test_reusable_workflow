@@ -1,6 +1,6 @@
 "Part","Value","Footprint","References","Quantity Per PCB","Farnell Nr","Datasheet"
 "C_Small","100n","C_0603_1608Metric","C1 C2","2","","~"
-"C_Small","1u","C_0603_1608Metric","C3","1","","~"
+"C_Small","1000n","C_0603_1608Metric","C3","1","","~"
 "ESP32-CAM","ESP32-CAM","ESP32CAM","IC1","1","","https://datasheet.lcsc.com/szlcsc/Ai-Thinker-ESP32-CAM_C277946.pdf"
 "Conn_01x02","Conn_01x02","PinHeader_1x02_P2.00mm_Vertical","J1","1","","~"
 "2N7002","2N7002","SOT-23","Q1","1","2706627","https://4donline.ihs.com/images/VipMasterIC/IC/ROHM/ROHM-S-A0008995632/ROHM-S-A0008995632-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
