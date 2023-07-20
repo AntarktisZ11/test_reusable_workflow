@@ -1601,7 +1601,7 @@
     (property "Reference" "C3" (id 0) (at 121.7041 61.3151 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "1u" (id 1) (at 121.7041 64.0902 0)
+    (property "Value" "1000n" (id 1) (at 121.7041 64.0902 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 119.38 62.23 0)
@@ -1709,7 +1709,7 @@
       (reference "C2") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/edcb2fde-0921-443c-97da-4f698c493ec9"
-      (reference "C3") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C3") (unit 1) (value "1000n") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/f49bbe22-90e9-49d4-834a-9903d50cdcbf"
       (reference "IC1") (unit 1) (value "ESP32-CAM") (footprint "ESP32CAM:ESP32CAM")
